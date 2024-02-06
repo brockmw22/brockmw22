@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <Link rel="stylesheet" href="./CSS/styles.css" type="text/css" />
+        <title>CSS Selectors & Specificity</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+        </style>
+    </head>
+    <body>
+        <div class="title">
+            <h1>CSS Selectors & Specificity</h1>
+        </div>
+        <div>
+            <Table class="Specificity">
+                <tr>
+                    <th>Priority</th>
+                    <th>Higher Specificity</th>
+                    <th>--></th>
+                    <th>Lower Specificity</th>
+                </tr>
+                <tr>
+                    <th>Selectors</th>
+                    <td>ID</td>
+                    <td>Class</td>
+                    <td>Type</td>
+                </tr>
+            </Table>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Selectors</th>
+                    <th>Uses</th>
+                    <th>Weight</th>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td><p>ID</p>
+                            #Example
+                    </td>
+                    <td>give a specific ID (Use sparingly)</td>
+                    <td>adds 1-0-0</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>
+                        <p>Class options</p>
+                        <ol>
+                            <li>.Example</li>
+                            <li>[type="radio"]</li>
+                            <li>[lang|="fr"]</li>
+                            <li>.Example</li>
+                        </ol>
+                    </td>
+                    <td><p>For each class, attribute selector, or pseudo-class in a matching selector</p></td>
+                    <td> 
+                        <p>add 0-1-0 to the weight value.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td><p>elements</p>
+                            <<span>p</span>>
+                    </td>
+                    <td>
+                        <p>For each type or pseudo-element in a matching selector</p> 
+                    </td>
+                    <td> 
+                            <p>add 0-0-1 to the weight value.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>4</th>
+                    <td><p>Universal</p>
+                             * { : ; }
+                    </td>
+                    <td>matches elements of any type</td>
+                    <td>These selectors do not impact the specificity weight value.</td>
+                </tr>
+                <tr>
+                    <th>5</th>
+                    <td>
+                        <p>No Value</p><br>
+                        :example()</td>
+                    <td><p>function takes a selector list as its argument,</p> <p>and selects any element that can be selected by one of the selectors in that list.</p></td>
+                    <td>These selectors do not impact the specificity weight value.</td>
+                </tr>
+                <tr>
+                    <th>6</th>
+                    <td>
+                        <P>Combinators</P>
+                        <ol>
+                            <li>+</li>
+                            <li>></li>
+                            <li>~</li>
+                            <li>" "</li>
+                            <li>| |</li>
+                        </ol>
+                    </td>
+                    <td>
+                        <P>may make a selector more specific in what is selected</P>
+                    </td>
+                    <td>    
+                        <p> they don't add any value to the specificity weight.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>7</th>
+                    <td><p>Matching</p> 
+                        <ul>
+                            <li>Example.Example,</li>
+                            <li>Example:Example,</li>
+                            <li>:root #Example input:Example {}</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>The weight is determined by comparing the values in the three columns</p>
+                    </td>
+                    <td>
+                        <p>from left to right.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>8</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+            </table>
+        </div>
+
+    </body>
+</html>

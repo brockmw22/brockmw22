@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    /* background-color: ; */
+    font-family: 'Roboto', Times, serif;
+}
+
+.title {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.title h1 {
+color: #E0BD6E;
+background-color: #615442;
+padding: 16px;
+display: inline-block;
+
+}
+
+table {
+    text-align: center;
+    border: 3px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #6E96E0;
+}
+
+th,
+td {
+    border: 2px solid black;
+    padding: 3px;
+    min-width: 125px;
+}
+
+th {
+    background-color: #E0B32C;
+}
